@@ -3,9 +3,6 @@ Treehouse Techdegree:
 FSJS project 1 - A Random Quote Generator
 ******************************************/
 
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
-
 /***
   Create the array of quote objects and name it `quotes`.
   Add at least five quote objects to the `quotes` array.
@@ -17,29 +14,29 @@ FSJS project 1 - A Random Quote Generator
 ***/
 var quotes = [
   {
-    quote: 'If you can't love yourself, how in the hell are you gonna love somebody else?'
-    source: 'RuPaul Charles'
-    citation: 'RuPaul's Drag Race'
+    quote: "If you can't love yourself, how in the hell are you gonna love somebody else?"
+    source: "RuPaul Charles"
+    citation: "RuPaul's Drag Race"
   },
   {
-    quote:
-    source:
-    citation:
+    quote: "Stories have to be told or they die, and when they die, we can't remember who we are or why we're here."
+    source: "Sue Monk Kidd"
+    citation: "The Secret Life of Bees"
   },
   {
-    quote:
-    source:
-    citation:
+    quote: "I was set free, because my greatest fear had already been realized, and I was still alive..."
+    source: "J.K. Rowling"
+    citation: "Very Good Lives"
   },
   {
-    quote:
-    source:
-    citation:
+    quote: "The harder you push your brain to come up with something creative, the less creative your ideas will be."
+    source: "Barbara Oakley"
+    citation: "A Mind for Numbers"
   },
   {
-    quote:
-    source:
-    citation:
+    quote: "Now I think it’s one of the most useless questions an adult can ask a child—What do you want to be when you grow up? As if growing up is finite. As if at some point you become something and that’s the end."
+    source:"Michelle Obama"
+    citation: "Becoming"
   },
 ];
 
