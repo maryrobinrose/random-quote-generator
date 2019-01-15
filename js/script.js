@@ -17,11 +17,30 @@ FSJS project 1 - A Random Quote Generator
 ***/
 var quotes = [
   {
-    Quote: 'If you can't love yourself, how in the hell are you gonna love somebody else?''
-    Source: 'RuPaul Charles'
-    Citation: 'RuPaul's Drag Race
-  }
-
+    quote: 'If you can't love yourself, how in the hell are you gonna love somebody else?'
+    source: 'RuPaul Charles'
+    citation: 'RuPaul's Drag Race'
+  },
+  {
+    quote:
+    source:
+    citation:
+  },
+  {
+    quote:
+    source:
+    citation:
+  },
+  {
+    quote:
+    source:
+    citation:
+  },
+  {
+    quote:
+    source:
+    citation:
+  },
 ];
 
 
