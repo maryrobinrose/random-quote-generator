@@ -49,8 +49,9 @@ var quotes = [
      `quotes` array.
 ***/
 
-
-
+function getRandomQuote() {
+  var randomQuote = Math.floor(Math.random() * (quotes.length));
+}
 
 /***
   Create the `printQuote` function to:
@@ -61,7 +62,9 @@ var quotes = [
      they are added to the HTML string.
    - set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
-
+function printQuote() {
+  var getRandomQuote
+}
 
 
 
