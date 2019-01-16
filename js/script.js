@@ -37,10 +37,16 @@ var quotes = [
     quote: "Now I think it’s one of the most useless questions an adult can ask a child—What do you want to be when you grow up? As if growing up is finite. As if at some point you become something and that’s the end."
     source:"Michelle Obama"
     citation: "Becoming"
-  },
+  }
 ];
 
-
+var colors = [
+  {#D6DBDF},
+  {#FAE5D3},
+  {#FDEBD0},
+  {#D0ECE7},
+  {#D7BDE2}
+];
 
 /***
   Create the `getRandomQuote` function to:
@@ -51,7 +57,11 @@ var quotes = [
 
 function getRandomQuote() {
   var randomQuote = Math.floor(Math.random() * (quotes.length));
+  var randomColor = Math.floor(Math.random() * color.length));
 }
+
+var randomQuote = "";
+var randomColor = "";
 
 /***
   Create the `printQuote` function to:
@@ -63,10 +73,11 @@ function getRandomQuote() {
    - set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
 function printQuote() {
-  var getRandomQuote
+
+
 }
 
-
+getRandomQuote();
 
 /***
   When the "Show another quote" button is clicked, the event listener
