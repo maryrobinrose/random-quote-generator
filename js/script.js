@@ -17,29 +17,31 @@ FSJS project 1 - A Random Quote Generator
 ***/
 var quotes = [
   {
-    quote: "If you can't love yourself, how in the hell are you gonna love somebody else?",
-    source: "RuPaul Charles",
-    citation: "RuPaul's Drag Race"
+    quote: "She's gonna step outside, uncover her eyes, Who knew she could feel so alive",
+    source: "Britney Spears",
+    citation: "Brave New Girl",
+    year: 2003
   },
   {
-    quote: "Stories have to be told or they die, and when they die, we can't remember who we are or why we're here.",
-    source: "Sue Monk Kidd",
-    citation: "The Secret Life of Bees"
+    quote: "But now I'm stronger than yesterday, Now it’s nothing but my way, My loneliness ain't killing me no more, I, I'm stronger",
+    source: "Britney Spears",
+    citation: "Stronger",
+    year: 2000
   },
   {
-    quote: "I was set free, because my greatest fear had already been realized, and I was still alive...",
-    source: "J.K. Rowling",
-    citation: "Very Good Lives"
+    quote: "Everyone has been doing emails.",
+    source: "Britney Spears",
+    year: 1999
   },
   {
-    quote: "The harder you push your brain to come up with something creative, the less creative your ideas will be.",
-    source: "Barbara Oakley",
-    citation: "A Mind for Numbers"
+    quote: "Now are you sure you want a piece of me?",
+    source: "Britney Spears",
+    citation: "Piece of Me",
+    year: 2007
   },
   {
-    quote: "Now I think it’s one of the most useless questions an adult can ask a child—What do you want to be when you grow up? As if growing up is finite. As if at some point you become something and that’s the end.",
-    source:"Michelle Obama",
-    citation: "Becoming"
+    quote: "Never, ever lose your passion to dream.",
+    source: "Britney Spears",
   }
 ];
 
@@ -72,10 +74,18 @@ function printQuote() {
   var html = "<p class='quote'>" + showQuote.quote + "</p>";
   html += "<p class='source'>" + showQuote.source + "</p>";
 
+  if ("citation" in showQuote) {
+    html += "<span class='citation'>" + showQuote.citation + "</span>";
+  }
+
+  if ("year" in showQuote) {
+    html += "<span class='year'>" + showQuote.year + "</span>";
+  }
+
   document.getElementById("quote-box").innerHTML = html;
 }
 
-
+printQuote();
 
 /***
   When the "Show another quote" button is clicked, the event listener
