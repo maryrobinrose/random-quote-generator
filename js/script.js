@@ -17,28 +17,28 @@ FSJS project 1 - A Random Quote Generator
 ***/
 var quotes = [
   {
-    quote: "If you can't love yourself, how in the hell are you gonna love somebody else?"
-    source: "RuPaul Charles"
+    quote: "If you can't love yourself, how in the hell are you gonna love somebody else?",
+    source: "RuPaul Charles",
     citation: "RuPaul's Drag Race"
   },
   {
-    quote: "Stories have to be told or they die, and when they die, we can't remember who we are or why we're here."
-    source: "Sue Monk Kidd"
+    quote: "Stories have to be told or they die, and when they die, we can't remember who we are or why we're here.",
+    source: "Sue Monk Kidd",
     citation: "The Secret Life of Bees"
   },
   {
-    quote: "I was set free, because my greatest fear had already been realized, and I was still alive..."
-    source: "J.K. Rowling"
+    quote: "I was set free, because my greatest fear had already been realized, and I was still alive...",
+    source: "J.K. Rowling",
     citation: "Very Good Lives"
   },
   {
-    quote: "The harder you push your brain to come up with something creative, the less creative your ideas will be."
-    source: "Barbara Oakley"
+    quote: "The harder you push your brain to come up with something creative, the less creative your ideas will be.",
+    source: "Barbara Oakley",
     citation: "A Mind for Numbers"
   },
   {
-    quote: "Now I think it’s one of the most useless questions an adult can ask a child—What do you want to be when you grow up? As if growing up is finite. As if at some point you become something and that’s the end."
-    source:"Michelle Obama"
+    quote: "Now I think it’s one of the most useless questions an adult can ask a child—What do you want to be when you grow up? As if growing up is finite. As if at some point you become something and that’s the end.",
+    source:"Michelle Obama",
     citation: "Becoming"
   }
 ];
@@ -51,7 +51,10 @@ var quotes = [
    - use the random number to `return` a random quote object from the
      `quotes` array.
 ***/
-
+function getRandomQuote() {
+  var randomQuote = Math.floor(Math.random() * quotes.length);
+  return quotes[randomQuote];
+};
 
 
 
@@ -64,7 +67,13 @@ var quotes = [
      they are added to the HTML string.
    - set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
+function printQuote() {
+  var showQuote = getRandomQuote();
+  var html = "<p class='quote'>" + showQuote.quote + "</p>";
+  html += "<p class='source'>" + showQuote.source + "</p>";
 
+  document.getElementById("quote-box").innerHTML = html;
+}
 
 
 
