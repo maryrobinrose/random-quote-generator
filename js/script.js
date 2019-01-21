@@ -9,30 +9,46 @@ var quotes = [
     quote: "She's gonna step outside, uncover her eyes, Who knew she could feel so alive",
     source: "Britney Spears",
     citation: "Brave New Girl",
-    year: 2003
+    year: 2003,
+    tag: "#bravery"
   },
   {
     quote: "My loneliness ain't killing me no more, I, I'm stronger",
     source: "Britney Spears",
     citation: "Stronger",
-    year: 2000
+    year: 2000,
+    tag: "#strength"
   },
   {
     quote: "Everyone has been doing emails.",
     source: "Britney Spears",
-    year: 1999
+    year: 1999,
+    tag: "#tech"
   },
   {
     quote: "Now are you sure you want a piece of me?",
     source: "Britney Spears",
     citation: "Piece of Me",
-    year: 2007
+    year: 2007,
+    tag: "#guts"
   },
   {
     quote: "Never, ever lose your passion to dream.",
     source: "Britney Spears",
+    tag: "#passion"
   }
 ];
+
+//Array of colors
+/*
+var colors = [
+  #FF69B4, // hot pink
+  #FF7F50, // coral
+  #FFA500, // orange
+  #FFD700, // gold
+  #FF4500 // orangered
+];*/
+
 
 //Generate a random number, use number to return random quote from array
 function getRandomQuote() {
@@ -43,20 +59,37 @@ function getRandomQuote() {
 //Calls getRandomQuote function
 function printQuote() {
   var showQuote = getRandomQuote();
-  var html = "<p class='quote'>" + showQuote.quote + "</p>";
-  html += "<p class='source'>" + showQuote.source;
+  var printToPage = "<p class='quote'>" + showQuote.quote + "</p>";
+  printToPage += "<p class='source'>" + showQuote.source;
+
+//Generates random number, use number to return random color from array
+/*function getColors() {
+  var randomColor = Math.floor(Math.random() * colors.length);
+  return colors[randomColor];
+}
+
+//Calls getColors function
+function changeColor() {
+  var newColor = getColors();
+  var background =
+}*/
+
 
 //Prints optional properities in quote array
   if ("citation" in showQuote) {
-    html += "<span class='citation'>" + showQuote.citation + "</span>";
+    printToPage += "<span class='citation'>" + showQuote.citation + "</span>";
   }
 
   if ("year" in showQuote) {
-    html += "<span class='year'>" + showQuote.year + "</span>" +"</p>";
+    printToPage += "<span class='year'>" + showQuote.year + "</span>";
   }
 
-//Sets innerHTML of 'quote-box' div to the HTML string
-  document.getElementById("quote-box").innerHTML = html;
+  if ("tag" in showQuote) {
+    printToPage += "<span class='tag'>" + showQuote.tag + "</span>" + "</p>";
+  }
+
+//Sets innerHTML of 'quote-box' div to string
+  document.getElementById("quote-box").innerHTML = printToPage;
 }
 
 //Runs printQuote function to print quotes to the page
