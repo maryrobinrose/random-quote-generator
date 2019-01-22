@@ -3,17 +3,19 @@ Treehouse Techdegree:
 FSJS project 1 - A Random Quote Generator
 ******************************************/
 
+//This project is expected to earn an Exceeds Expectations grade
+
 //Array of quotes
 var quotes = [
   {
-    quote: "She's gonna step outside, uncover her eyes, Who knew she could feel so alive",
+    quote: "She's gonna step outside, uncover her eyes / Who knew she could feel so alive",
     source: "Britney Spears",
     citation: "Brave New Girl",
     year: 2003,
     tag: "#bravery"
   },
   {
-    quote: "My loneliness ain't killing me no more, I, I'm stronger",
+    quote: "My loneliness ain't killing me no more / I, I'm stronger",
     source: "Britney Spears",
     citation: "Stronger",
     year: 2000,
@@ -58,19 +60,19 @@ var colors = [
   "#971d78" // dark magenta
 ];
 
-//Generate a random number, use number to return random quote from array
+//Generates a random number, uses that number to return random quote from array
 function getRandomQuote() {
   var randomQuote = Math.floor(Math.random() * quotes.length);
   return quotes[randomQuote];
 };
 
-//Selects and returns color
+//Generates a random number, uses that number to return a random color from array
 function getColor() {
   var randomColor = Math.floor(Math.random() * colors.length);
   return colors[randomColor];
 };
 
-//Calls getRandomQuote function
+//Calls getRandomQuote and getColor functions
 function printQuote() {
   var showColor = getColor();
   var showQuote = getRandomQuote();
