@@ -39,21 +39,10 @@ var quotes = [
   }
 ];
 
-//Array of colors
-/*
-var colors = [
-  #FF69B4, // hot pink
-  #FF7F50, // coral
-  #FFA500, // orange
-  #FFD700, // gold
-  #FF4500 // orangered
-];*/
-
-
 //Generate a random number, use number to return random quote from array
 function getRandomQuote() {
-  var randomQuote = Math.floor(Math.random() * quotes.length); //Selects random quote
-  return quotes[randomQuote]; //Returns random quote
+  var randomQuote = Math.floor(Math.random() * quotes.length);
+  return quotes[randomQuote];
 };
 
 //Calls getRandomQuote function
@@ -61,19 +50,6 @@ function printQuote() {
   var showQuote = getRandomQuote();
   var printToPage = "<p class='quote'>" + showQuote.quote + "</p>";
   printToPage += "<p class='source'>" + showQuote.source;
-
-//Generates random number, use number to return random color from array
-/*function getColors() {
-  var randomColor = Math.floor(Math.random() * colors.length);
-  return colors[randomColor];
-}
-
-//Calls getColors function
-function changeColor() {
-  var newColor = getColors();
-  var background =
-}*/
-
 
 //Prints optional properities in quote array
   if ("citation" in showQuote) {
@@ -94,6 +70,35 @@ function changeColor() {
 
 //Runs printQuote function to print quotes to the page
 printQuote();
+
+
+//Array of colors
+var colors = [
+  "#FF7F50", // coral
+  "#FF1493", // deep pink
+  "#FD5E53", // sunset orange
+  "#FFA500", // orange
+  "#FF69B4", // hot pink
+  "#FFD700", // gold
+  "#FFC922", // sunset yellow
+  "#FF4500" // orangered
+];
+
+//Selects and returns color
+function getColor() {
+  var randomColor = Math.floor(Math.random() * colors.length);
+  return colors[randomColor];
+};
+
+
+//Calls getColor function
+function changeColor() {
+  var showColor = getColor();
+  var button = document.querySelector("button");
+  button.addEventListener("click", function(){
+  document.body.style.background = showColor;
+  });
+}
 
 
 //When the button is clicked, the event listener will call printQuote function
