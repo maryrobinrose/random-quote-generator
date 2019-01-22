@@ -72,7 +72,7 @@ function getColor() {
   return colors[randomColor];
 };
 
-//Calls getRandomQuote and getColor functions and prints to the page
+//Calls getRandomQuote and getColor functions to print to the page
 function printQuote() {
   var showColor = getColor();
   var showQuote = getRandomQuote();
