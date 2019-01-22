@@ -36,19 +36,26 @@ var quotes = [
     quote: "Never, ever lose your passion to dream.",
     source: "Britney Spears",
     tag: "#passion"
+  },
+  {
+    quote: "Don't treat me like a little girl.",
+    source: "Britney Spears",
+    tag: "#woman"
   }
 ];
 
 //Array of colors
 var colors = [
-  "#FF7F50", // coral
-  "#FF1493", // deep pink
-  "#FD5E53", // sunset orange
-  "#FFA500", // orange
-  "#FF69B4", // hot pink
   "#FFD700", // gold
   "#FFC922", // sunset yellow
-  "#FF4500" // orangered
+  "#FF7F50", // coral
+  "#FD5E53", // sunset orange
+  "#FFA500", // orange
+  "#FF4500", // orangered
+  "#FF69B4", // hot pink
+  "#FF1493", // deep pink
+  "#BC177D", // deep magenta
+  "#971d78" // dark magenta
 ];
 
 //Generate a random number, use number to return random quote from array
