@@ -39,14 +39,33 @@ var quotes = [
   }
 ];
 
+//Array of colors
+var colors = [
+  "#FF7F50", // coral
+  "#FF1493", // deep pink
+  "#FD5E53", // sunset orange
+  "#FFA500", // orange
+  "#FF69B4", // hot pink
+  "#FFD700", // gold
+  "#FFC922", // sunset yellow
+  "#FF4500" // orangered
+];
+
 //Generate a random number, use number to return random quote from array
 function getRandomQuote() {
   var randomQuote = Math.floor(Math.random() * quotes.length);
   return quotes[randomQuote];
 };
 
+//Selects and returns color
+function getColor() {
+  var randomColor = Math.floor(Math.random() * colors.length);
+  return colors[randomColor];
+};
+
 //Calls getRandomQuote function
 function printQuote() {
+  var showColor = getColor();
   var showQuote = getRandomQuote();
   var printToPage = "<p class='quote'>" + showQuote.quote + "</p>";
   printToPage += "<p class='source'>" + showQuote.source;
@@ -66,39 +85,16 @@ function printQuote() {
 
 //Sets innerHTML of 'quote-box' div to string
   document.getElementById("quote-box").innerHTML = printToPage;
+
+//Changes background color
+  document.body.style.background = showColor;
 }
 
 //Runs printQuote function to print quotes to the page
 printQuote();
 
-
-//Array of colors
-var colors = [
-  "#FF7F50", // coral
-  "#FF1493", // deep pink
-  "#FD5E53", // sunset orange
-  "#FFA500", // orange
-  "#FF69B4", // hot pink
-  "#FFD700", // gold
-  "#FFC922", // sunset yellow
-  "#FF4500" // orangered
-];
-
-//Selects and returns color
-function getColor() {
-  var randomColor = Math.floor(Math.random() * colors.length);
-  return colors[randomColor];
-};
-
-
-//Calls getColor function
-function changeColor() {
-  var showColor = getColor();
-  var button = document.querySelector("button");
-  button.addEventListener("click", function(){
-  document.body.style.background = showColor;
-  });
-}
+//Automatically changes the quote and color after five seconds
+var quoteTimer = setInterval(printQuote, 5000);
 
 
 //When the button is clicked, the event listener will call printQuote function
