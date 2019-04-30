@@ -4,6 +4,10 @@
 
 #### By **Mary Robin Rose**
 
+## Live Link
+
+https://maryrobinrose.github.io/random-quote-generator
+
 ## Description
 
 _This project uses JavaScript to randomly select and show a new quote when button is clicked or after a few seconds._
